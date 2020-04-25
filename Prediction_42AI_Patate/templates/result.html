@@ -1,0 +1,61 @@
+{% extends 'layout.html' %}
+
+{% block header %}
+  <h1>{% block title %}Result{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+}
+</style>
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Image labelisation</title>
+</head>
+<body>
+&emsp;
+<center>
+&emsp;
+
+<br>
+&emsp;
+<img src="{{url_for('static', filename='uploads/img.jpg')}}" alt="Image to predict" height="280" style="border:10px groove blue">
+<br>
+<br>
+<br>
+<table style="width:40%" bgcolor="#e0ebeb">
+  <tr>
+    <th></th>
+    <th>Prediction</th> 
+    <th>Accuracy</th>
+    <th>True labels</th>
+  </tr>
+  <tr>
+    <th>Direction</th>
+    <td>{{pred_dir}} </td>
+    <td>{{perc_dir}}% </td>
+    <td>{{true_dir}} </td>
+  </tr>
+  <tr>
+    <th>Speed</th>
+    <td>{{pred_speed}} </td>
+    <td> </td>
+    <td>{{true_speed}} </td>
+  </tr>
+</table>
+</center>
+</body>
+</html>
+
+{% endblock %}

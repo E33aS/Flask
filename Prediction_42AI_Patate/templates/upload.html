@@ -1,0 +1,59 @@
+{%extends 'layout.html' %}
+
+{% block header %}
+  <h1>{% block title %}Upload{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+
+<!doctype html>
+<html>
+<body>
+<br>
+<div style="padding:2px; width:480px; height:540px; background:#888888; display:block; text-align:left;">
+&emsp;
+  <title>Predict a picture labels</title>
+
+    	<h1>
+    	&emsp; 
+    	<font color=#7a0404>
+    	Upload a new picture :
+    	
+    	</h1>
+	<br>
+    		<form method=post enctype=multipart/form-data>
+			&emsp;
+			<b>Select Photo to use for prediction: </b>
+			<br>
+			<br>
+        		<input type="file" multiple="" name="im" style="margin-left:4em"> 
+			<br>
+			<br>
+			&emsp;
+			<b>Select .json file containing labels: </b>
+			<br>
+			<br>
+        		<input type="file" multiple="" name="js" style="margin-left:4em"> 
+			<br>
+			<br>
+			&emsp;
+         		<b>Give path to model used for prediction:</b>
+			<br>
+			<br>
+			<input type="text" name="model" style="margin-left:4em">
+                	<br>
+                	<br>
+			&emsp;
+         		<b>Give number of directions (3 or 5):</b>
+			<br>
+			<br>
+			<input type="text" name="nb_dir" style="margin-left:4em">
+                	<br>
+                	<br>
+	</font> 
+         		<input type=submit value=Upload style="margin-left:14em; height:50px; width:100px">
+    		</form>
+</div>
+</body>
+</html>
+{% endblock %}
