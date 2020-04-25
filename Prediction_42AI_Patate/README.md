@@ -2,7 +2,7 @@
 
 This is a little web tool made with Flask that:
 1. predicts labels for a given image.
-2. uses a given model previously trained with the training script found in the `train_model` folder.
+2. uses a given model previously trained with the training script found in the `train_model` folder from the 42ai_autonomous car github account.
 3. compares to the true labels of the image if those are known.
 
 
